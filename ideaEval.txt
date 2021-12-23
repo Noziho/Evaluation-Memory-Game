@@ -1,0 +1,16 @@
+Idée éval:
+
+- à chaque clique afficher l'image correspondant au div cliqué et non toute les divs.
+	- soi 1 par 1 mais mauvaise façons de faire, soi une boucle surement.
+
+- si deux images sont cliqué mais que leur src ne corresponde pas alors les remettre en hide.
+	-comparé la src de toute les images dans une boucle, si deux on la même alors ... .
+
+- sinon les laisser en show et compter +1 point ( faire un compteur de point aussi ).
+
+- trouver un moyen pour afficher que deux fois chaque image.
+	- 0 idée.
+
+- si toutes les images sont en show, alors condition de victoire
+	- ( afficher score, + boutton reset ou auto reset
+	avec un reload).
