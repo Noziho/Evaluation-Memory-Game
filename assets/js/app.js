@@ -5,7 +5,6 @@ let img = [
     "/assets/img/livai.jpg",
     "/assets/img/lattaque-des-titans-photo-1359464.jpeg",
     "/assets/img/Titan_Colossal_anim .webp",
-
 ];
 
 let img2 = [
@@ -15,95 +14,13 @@ let img2 = [
     "/assets/img/livai.jpg",
     "/assets/img/lattaque-des-titans-photo-1359464.jpeg",
     "/assets/img/Titan_Colossal_anim .webp",
-
 ];
 
-let counter = 12;
 let idCounter = 1;
 let counterIdDiv = 0;
 const containerCard = document.getElementById('containerCard');
 let usedRandom = [];
 let usedRandom2 = [];
-
-//function for display image with an event.
-function printImg () {
-    $('#2').click(function () {
-        let num1 = $('#3');
-        num1.addClass('show');
-        num1.animate({
-            opacity: "1",
-        }, 1000);
-    });
-
-    $('#4').click(function () {
-        let num2 = $('#5');
-        num2.addClass('show');
-        num2.animate({
-            opacity: "1",
-        }, 1000);
-    });
-
-    $('#6').click(function () {
-        $('#7').animate({
-            opacity: "1"
-        }, 1000);
-    });
-
-    $('#8').click(function () {
-        $('#9').animate({
-            opacity: "1"
-        }, 1000);
-    });
-
-    $('#10').click(function () {
-        $('#11').animate({
-            opacity: "1"
-        }, 1000);
-    });
-
-    $('#12').click(function () {
-        $('#13').animate({
-            opacity: "1"
-        }, 1000);
-    });
-
-    $('#14').click(function () {
-        $('#15').animate({
-            opacity: "1"
-        }, 1000);
-    });
-
-    $('#16').click(function () {
-        $('#17').animate({
-            opacity: "1"
-        }, 1000);
-    });
-
-    $('#18').click(function () {
-        $('#19').animate({
-            opacity: "1"
-        }, 1000);
-    });
-
-    $('#20').click(function () {
-        $('#21').animate({
-            opacity: "1"
-        }, 1000);
-    });
-
-    $('#22').click(function () {
-        $('#23').animate({
-            opacity: "1"
-        }, 1000);
-    });
-
-    $('#24').click(function () {
-        $('#25').animate({
-            opacity: "1"
-        }, 1000);
-    });
-}
-
 
 
 //a function for get a random for first table.
@@ -130,7 +47,6 @@ function getRandom2() {
 for (let image of img) {
 
     counterIdDiv += 2;
-    const random = Math.floor((Math.random() * img.length))
     let divCard = document.createElement('div');
     divCard.classList = 'card';
     divCard.id = counterIdDiv.toString();
@@ -140,7 +56,7 @@ for (let image of img) {
     imgCard.id = idCounter.toString();
     imgCard.setAttribute('src', img[getRandom()]);
     imgCard.style.width = '100%';
-    imgCard.style.opacity = "0";
+    imgCard.classList = "hide";
 
     divCard.appendChild(imgCard);
     containerCard.appendChild(divCard);
@@ -159,15 +75,72 @@ for (let image of img2) {
     imgCard.id = idCounter.toString();
     imgCard.setAttribute('src', img[getRandom2()]);
     imgCard.style.width = '100%';
-    imgCard.style.opacity = "0";
+    imgCard.classList = "hide";
 
     divCard.appendChild(imgCard);
     containerCard.appendChild(divCard);
 }
+function printImg () {
+    $('#2').click(function () {
+        let num1 = $('#3');
+        num1.addClass('show');
 
-printImg();
+    });
 
-if ($('#3').attr('src') === $('#5').attr('src')) {
-    console.log('bonne condition');
+    $('#4').click(function () {
+        let num2 = $('#5');
+        num2.addClass('show');
+    });
+
+    $('#6').click(function () {
+        let num3 = $('#7');
+        num3.addClass('show');
+    });
+
+    $('#8').click(function () {
+        let num4 = $('#9');
+        num4.addClass('show');
+    });
+
+    $('#10').click(function () {
+        let num5 = $('#11');
+        num5.addClass('show');
+    });
+
+    $('#12').click(function () {
+        let num5= $('#13');
+        num5.addClass('show');
+    });
+
+    $('#14').click(function () {
+        let num11 = $ ('#15');
+        num11.addClass('show');
+    });
+
+    $('#16').click(function () {
+        let num12 = $('#17');
+        num12.addClass('show');
+    });
+
+    $('#18').click(function () {
+        let num13 = $('#19');
+        num13.addClass('show');
+    });
+
+    $('#20').click(function () {
+        let num14 = $('#21');
+        num14.addClass('show');
+    });
+
+    $('#22').click(function () {
+        let num15 = $('#23');
+        num15.addClass('show');
+    });
+
+    $('#24').click(function () {
+        let num16= $('#25');
+        num16.addClass('show');
+    });
 }
 
+printImg();
