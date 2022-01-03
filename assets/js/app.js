@@ -1,3 +1,4 @@
+//table with all image x2.
 let img = [
     "/assets/img/armin.jpg",
     "/assets/img/eren.jpg",
@@ -14,6 +15,7 @@ let img = [
 ];
 
 const containerCard = document.getElementById('containerCard');
+
 let imgId = 0;
 let usedRandom = [];
 let clickedImg = [];
@@ -21,7 +23,7 @@ let clickedImgId = [];
 let score = 0;
 
 
-//a function for get a random for first table.
+//a function for get a random on the table with condition for print all image one time.
 function getRandom() {
     const random = Math.floor((Math.random() * img.length));
     if (usedRandom.includes(random)) {
@@ -31,14 +33,13 @@ function getRandom() {
     return random;
 }
 
-//a function for get a random for second table.
-
-
+/* This function allows you to check if two clicked images have the same source, with each click we push the random
+ (the index where the source of the image is located) which allows to check if they have the same src image or not.
+*/
 function check () {
     if (clickedImg.length === 2) {
         if (clickedImg[0] === clickedImg[1]) {
             score ++;
-            console.log(score);
             clickedImgId = [];
         }
 
@@ -64,7 +65,7 @@ function check () {
 }
 
 
-// a loop that displays an image of the table only once
+// A loop for create a div for each element of the table, and create an <img> for each div create, we add an random entry for put the src of all images randomly.
 for (let image of img) {
 
     let random = getRandom();
@@ -78,6 +79,7 @@ for (let image of img) {
 
     divCard.classList = 'card';
 
+    // An event listener for push the random index of the function getRandom() of the image that was clicked. And to the display the clicked image.
     divCard.addEventListener('click', function () {
         imgCard.classList = "show";
         clickedImg.push(img[random]);
