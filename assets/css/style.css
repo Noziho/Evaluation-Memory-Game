@@ -61,13 +61,28 @@ header {
 .show {
     display: block;
 }
+
 #scoreBoard {
     margin: 1rem;
     display: flex;
+    flex-flow: row wrap;
     justify-content: center;
     width: 100%;
     font-size: 3rem;
 }
+#userScore {
+    width: 100%;
+    text-align: center;
+}
+
+#reStart {
+    width: 55%;
+    background: rgba(34, 34, 34, 0.53);
+    color: white;
+    border-radius: 12px;
+    padding: 1rem;
+}
+
 
 
 
