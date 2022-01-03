@@ -61,6 +61,13 @@ header {
 .show {
     display: block;
 }
+#scoreBoard {
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 3rem;
+}
 
 
 
