@@ -44,7 +44,6 @@ function check () {
         }
 
         else {
-            console.log("no match");
             setTimeout(function () {
                 document.getElementById(clickedImgId[0]).classList = "hide";
                 document.getElementById(clickedImgId[1]).classList = "hide";
@@ -60,7 +59,6 @@ function check () {
             window.location.assign('score.html');
         },1000)
         localStorage.setItem('score', score.toString());
-        console.log("win");
     }
 }
 
@@ -84,7 +82,6 @@ for (let image of img) {
         imgCard.classList = "show";
         clickedImg.push(img[random]);
         clickedImgId.push(imgCard.id);
-        console.log(clickedImgId);
         check();
     })
 

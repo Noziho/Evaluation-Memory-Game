@@ -37,7 +37,6 @@ header {
     margin-top: 5%;
     padding: 2rem;
     width: 40%;
-    height: 80rem;
     background: #222;
     border-radius: 12px;
 }
@@ -81,6 +80,24 @@ header {
     color: white;
     border-radius: 12px;
     padding: 1rem;
+}
+
+@media screen and (max-width: 1130px) {
+    #containerCard {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #containerCard {
+        width: 100%;
+        flex-flow: row wrap;
+    }
+
+    .card {
+        width: 50%;
+        height: 20rem;
+    }
 }
 
 
